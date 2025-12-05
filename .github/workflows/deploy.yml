@@ -37,11 +37,11 @@ jobs:
         run: npm run build
 
       # PATCH the built HTML so asset paths include /telecare-express
-      - name: Fix asset paths for GitHub Pages
-        run: |
-          sed -i 's/src="\/assets/src="\/telecare-express\/assets/g' dist/index.html
-          sed -i 's/href="\/assets/href="\/telecare-express\/assets/g' dist/index.html
-          sed -i 's/href="\/vite.svg/href="\/telecare-express\/vite.svg/g' dist/index.html
+      # - name: Fix asset paths for GitHub Pages
+      #   run: |
+      #     sed -i 's/src="\/assets/src="\/telecare-express\/assets/g' dist/index.html
+      #     sed -i 's/href="\/assets/href="\/telecare-express\/assets/g' dist/index.html
+      #     sed -i 's/href="\/vite.svg/href="\/telecare-express\/vite.svg/g' dist/index.html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
