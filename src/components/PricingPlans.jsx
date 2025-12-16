@@ -16,22 +16,18 @@ function PricingPlans() {
                 'Secure video consultation',
                 'Medical records access'
             ],
-            popular: false
+            popular: true
         },
         {
-            name: 'Individual Plan',
-            price: 29,
-            period: 'per month',
-            visits: '3 visits/month',
-            description: 'Ideal for ongoing healthcare needs',
+            name: 'Advanced Visit',
+            price: 69,
+            period: 'per visit',
+            description: 'Moderate complexity conditions requiring more detailed evaluation and follow-up',
             features: [
-                'Up to 3 visits per month',
-                'Unlimited messaging with providers',
-                'E-prescriptions included',
-                'Priority appointment scheduling',
-                'Chronic condition management',
-                'Annual wellness check',
-                'Mental health support'
+                'Including all features from Pay Per Visit',
+                'Lab ordering and review',
+                'X-ray ordering and review',
+                'Hospital records review'
             ],
             popular: true
         },
@@ -54,20 +50,16 @@ function PricingPlans() {
             popular: false
         },
         {
-            name: 'Chronic Care Plan',
-            price: 99,
+            name: 'Chronic or Transitional Care Management',
+            price: '45-85',
             period: 'per month',
-            visits: 'Unlimited visits',
-            description: 'Specialized care for chronic conditions',
+            description: 'Complex or multiple conditions requiring comprehensive assessment and monthly care coordination',
             features: [
-                'Unlimited telehealth visits',
-                'Dedicated care coordinator',
-                'Custom treatment plans',
-                'Weekly check-ins available',
-                'Specialist consultations',
-                'Lab work coordination',
-                'Medication management',
-                '24/7 urgent care access'
+                'Multiple concurrent health concerns',
+                'Chronic condition management',
+                'Lab review and treatment planning',
+                'Mental health consultations',
+                'Comprehensive medication reviews'
             ],
             popular: false
         }
