@@ -390,6 +390,27 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
+.pricing-card-coming-soon {
+    border-color: var(--text-light);
+    opacity: 0.7;
+    background: var(--background-light);
+}
+
+.pricing-card-coming-soon:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+    border-color: var(--text-light);
+}
+
+.pricing-card-coming-soon .pricing-amount,
+.pricing-card-coming-soon .pricing-currency {
+    color: var(--text-light);
+}
+
+.pricing-card-coming-soon .pricing-check {
+    color: var(--text-light);
+}
+
 .pricing-badge {
     position: absolute;
     top: -12px;
@@ -403,6 +424,10 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.pricing-badge-coming-soon {
+    background: var(--text-secondary);
 }
 
 .pricing-header {
