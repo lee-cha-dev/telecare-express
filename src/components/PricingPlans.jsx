@@ -29,24 +29,6 @@ function PricingPlans() {
                 'X-ray ordering and review',
                 'Hospital records review'
             ],
-            popular: true
-        },
-        {
-            name: 'Family Plan',
-            price: 79,
-            period: 'per month',
-            visits: '10 visits/month',
-            description: 'Comprehensive care for your whole family',
-            features: [
-                'Up to 10 visits per month',
-                'Coverage for up to 6 family members',
-                'Unlimited provider messaging',
-                'Pediatric care included',
-                'Mental health support',
-                'Chronic condition management',
-                'Priority 24/7 support',
-                'Annual wellness checks for all'
-            ],
             popular: false
         },
         {
@@ -63,6 +45,25 @@ function PricingPlans() {
             ],
             popular: false
         }
+        // {
+        //     name: 'Family Plan',
+        //     price: 79,
+        //     period: 'per month',
+        //     visits: '10 visits/month',
+        //     description: 'Comprehensive care for your whole family',
+        //     features: [
+        //         'Up to 10 visits per month',
+        //         'Coverage for up to 6 family members',
+        //         'Unlimited provider messaging',
+        //         'Pediatric care included',
+        //         'Mental health support',
+        //         'Chronic condition management',
+        //         'Priority 24/7 support',
+        //         'Annual wellness checks for all'
+        //     ],
+        //     popular: false,
+        //     available: false
+        // },
     ];
 
     return (
