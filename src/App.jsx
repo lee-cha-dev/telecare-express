@@ -5,10 +5,12 @@ import {useAuth} from "./components/hooks/useAuth.js";
 import Login from "./components/Login.jsx";
 
 function App() {
-    const { isAuthenticated, isLoading, login, logout } = useAuth();
+    const { isAuthenticated, login } = useAuth();
+
+    const isDev = import.meta.env.MODE === 'development';
 
     // Show login page if not authenticated
-    if (!isAuthenticated) {
+    if (!isAuthenticated && !isDev) {
         return <Login onLogin={login} />;
     }
     return (

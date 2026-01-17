@@ -20,7 +20,11 @@ function Features() {
                 </svg>
             ),
             title: 'E-Prescriptions',
-            description: 'Your provider can send prescriptions directly to your preferred pharmacy electronically.'
+            description:
+                <>
+                    Your provider can send prescriptions directly to your preferred pharmacy electronically. Low price options are available with companies such as{' '}
+                    <a href="https://costplusdrugs.com/" target="_blank" rel="noreferrer">Cost Plus Drugs</a> which delivers directly to your home.
+                </>
         },
         {
             icon: (
@@ -58,7 +62,7 @@ function Features() {
                 </svg>
             ),
             title: 'Expert Providers',
-            description: 'Board-certified physicians and licensed healthcare professionals with years of experience.'
+            description: 'Board-certified physicians and nurse practitioners with years of experience.'
         }
     ];
 

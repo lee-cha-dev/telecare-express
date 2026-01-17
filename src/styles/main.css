@@ -468,6 +468,12 @@ body {
     margin-left: 4px;
 }
 
+.pricing-yearly {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+}
+
 .pricing-visits {
     font-size: 14px;
     font-weight: 600;
