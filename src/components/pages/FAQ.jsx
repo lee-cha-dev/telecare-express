@@ -87,7 +87,10 @@ function FAQ({onNavigate}) {
 
     return (
         <div className="telecare-app">
-            <Header onNavigate={onNavigate}/>
+            <Header
+                onNavigate={onNavigate}
+                mainPage={false}
+            />
             <section id="faq" className="faq">
                 <div className="container">
                     <div className="section-header">

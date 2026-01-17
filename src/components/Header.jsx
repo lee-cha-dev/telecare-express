@@ -5,7 +5,8 @@ import React, { useState } from 'react';
 // ============================================
 function Header(
     {
-        onNavigate
+        onNavigate,
+        mainPage = true
     }
 ) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,21 +42,26 @@ function Header(
                         <span className="logo-text">TeleCare Express</span>
                     </a>
 
-                    <button
-                        className="mobile-menu-button"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        aria-label="Toggle menu"
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                    {
+                        mainPage &&
+                            <>
+                                <button
+                                    className="mobile-menu-button"
+                                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                                    aria-label="Toggle menu"
+                                >
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
 
-                    <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
-                        <button onClick={() => scrollToSection('features')} className="nav-link">Features</button>
-                        <button onClick={() => scrollToSection('pricing')} className="nav-link">Pricing</button>
-                        <button onClick={() => scrollToSection('states')} className="nav-link">Get Started</button>
-                    </nav>
+                                <nav className={`nav ${mobileMenuOpen ? 'nav-open' : ''}`}>
+                                    <button onClick={() => scrollToSection('features')} className="nav-link">Features</button>
+                                    <button onClick={() => scrollToSection('pricing')} className="nav-link">Pricing</button>
+                                    <button onClick={() => scrollToSection('states')} className="nav-link">Get Started</button>
+                                </nav>
+                            </>
+                    }
                 </div>
             </div>
         </header>
