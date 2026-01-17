@@ -1125,6 +1125,7 @@ body {
 }
 
 .faq-item {
+    scroll-margin-top: 100px;
     background: white;
     border: 2px solid var(--border-color);
     border-radius: 16px;

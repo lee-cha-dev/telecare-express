@@ -1,4 +1,4 @@
-import React, {useState, useMemo, useEffect} from 'react';
+import React, {useState, useMemo, useEffect, useRef} from 'react';
 import Header from "../Header.jsx";
 import Footer from "../Footer.jsx";
 import {faqData} from "../../config/FAQData.js";
@@ -11,6 +11,7 @@ function FAQ({onNavigate}) {
     const [openIndex, setOpenIndex] = useState(null);
     const [searchQuery, setSearchQuery] = useState('');
     const [activeCategory, setActiveCategory] = useState('all');
+    const faqItemRefs = useRef([]);
 
     const categories = [
         {id: 'all', label: 'All Questions'},
@@ -33,7 +34,51 @@ function FAQ({onNavigate}) {
     }, [searchQuery, activeCategory]);
 
     const toggleFaq = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
+        // If closing the same item, just close it
+        if (openIndex === index) {
+            setOpenIndex(null);
+            return;
+        }
+
+        // If another item is open, close it first and wait for collapse
+        if (openIndex !== null) {
+            setOpenIndex(null);
+
+            // Wait for collapse animation to finish, then open new item and scroll
+            setTimeout(() => {
+                setOpenIndex(index);
+
+                // Now scroll after the new state is set
+                requestAnimationFrame(() => {
+                    const element = faqItemRefs.current[index];
+                    if (element) {
+                        const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                        const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            }, 350); // Match this to your CSS transition duration
+        } else {
+            // No item is open, just open and scroll
+            setOpenIndex(index);
+
+            requestAnimationFrame(() => {
+                const element = faqItemRefs.current[index];
+                if (element) {
+                    const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+                    const targetPosition = element.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        }
     };
 
     const clearSearch = () => {
@@ -163,12 +208,13 @@ function FAQ({onNavigate}) {
                     <div className="faq-list">
                         {filteredFaqs.length > 0 ? (
                             filteredFaqs.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className={`faq-item ${openIndex === index ? 'faq-item-open' : ''}`}
-                                >
-                                    <button
-                                        className="faq-question"
+                            <div
+                                key={index}
+                                ref={el => faqItemRefs.current[index] = el}
+                                className={`faq-item ${openIndex === index ? 'faq-item-open' : ''}`}
+                            >
+                                <button
+                                    className="faq-question"
                                         onClick={() => toggleFaq(index)}
                                         aria-expanded={openIndex === index}
                                     >
