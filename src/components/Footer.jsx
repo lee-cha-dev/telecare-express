@@ -1,7 +1,19 @@
 // ============================================
 // FOOTER COMPONENT
 // ============================================
-function Footer() {
+function Footer(
+    {
+        onNavigate
+    }
+) {
+    const handleFaqClick = (e) => {
+        e.preventDefault();
+        if (onNavigate) {
+            onNavigate('faq');
+            window.scrollTo(0, 0);
+        }
+    };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -26,7 +38,7 @@ function Footer() {
                             <li><a href="#features">Features</a></li>
                             <li><a href="#pricing">Pricing</a></li>
                             <li><a href="#states">Get Started</a></li>
-                            <li><a href="#faq">FAQ</a></li>
+                            <li><a href="#faq" onClick={handleFaqClick}>FAQ</a></li>
                         </ul>
                     </div>
 

@@ -10,15 +10,15 @@ import Hero from "../Hero.jsx";
 // ============================================
 // MAIN APP COMPONENT
 // ============================================
-export function TeleCareExpress() {
+export function TeleCareExpress({ onNavigate }) {
     return (
         <div className="telecare-app">
-            <Header/>
+            <Header onNavigate={onNavigate} />
             <Hero/>
             <Features/>
             <PricingPlans/>
             <StateSelector/>
-            <Footer/>
+            <Footer onNavigate={onNavigate} />
         </div>
     );
 }
