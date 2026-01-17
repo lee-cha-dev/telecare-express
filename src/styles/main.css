@@ -5,6 +5,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+    -webkit-user-select: none; /* Safari */
+}
+
+/* Re-enable for input fields and text areas where users need to type/select */
+input, textarea {
+    user-select: text;
+    -webkit-user-select: text;
 }
 
 html {
@@ -17,6 +25,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     color: #1e293b;
     line-height: 1.6;
+    user-select: none;
+    -webkit-user-select: none;
 }
 
 /* ============================================
