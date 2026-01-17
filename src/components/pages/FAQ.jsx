@@ -285,9 +285,9 @@ function FAQ({onNavigate}) {
                                 <a href="mailto:support@telecareexpress.com" className="btn btn-primary">
                                     Email Support
                                 </a>
-                                <a href="tel:1-800-TELECARE" className="btn btn-secondary">
-                                    Call 1-800-TELECARE
-                                </a>
+                                {/*<a href="tel:1-800-TELECARE" className="btn btn-secondary">*/}
+                                {/*    Call 1-800-TELECARE*/}
+                                {/*</a>*/}
                             </div>
                         </div>
                     </div>
