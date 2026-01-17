@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import arizonaLogo from '../images/arizona_logo.jpg';
+import arkansasLogo from '../images/arkansas_logo.jpg';
 
 // ============================================
 // STATE SELECTOR COMPONENT
@@ -7,8 +9,8 @@ function StateSelector() {
     const [selectedState, setSelectedState] = useState('');
 
     const states = [
-        { code: 'AZ', name: 'Arizona', available: true },
-        { code: 'AR', name: 'Arkansas', available: true }
+        { code: 'AZ', name: 'Arizona', available: true, logo: arizonaLogo },
+        { code: 'AR', name: 'Arkansas', available: true, logo: arkansasLogo }
     ];
 
     const handleStateSelect = (stateCode) => {
@@ -42,9 +44,7 @@ function StateSelector() {
                             >
                                 <div className="state-card-content">
                                     <div className="state-icon">
-                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22C12 22 19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9C9.5 7.62 10.62 6.5 12 6.5C13.38 6.5 14.5 7.62 14.5 9C14.5 10.38 13.38 11.5 12 11.5Z" fill="currentColor"/>
-                                        </svg>
+                                        <img src={state.logo} alt={`${state.name} logo`} />
                                     </div>
                                     <h3 className="state-name">{state.name}</h3>
                                     <div className="state-code">{state.code}</div>

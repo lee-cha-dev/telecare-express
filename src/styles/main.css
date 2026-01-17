@@ -591,20 +591,20 @@ body {
 }
 
 .state-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
-    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 24px;
-    color: white;
+    overflow: hidden;
+    border-radius: 8px;
 }
 
-.state-icon svg {
-    width: 40px;
-    height: 40px;
+.state-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .state-name {
