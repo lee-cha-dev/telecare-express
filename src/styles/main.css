@@ -1209,7 +1209,7 @@ body {
 }
 
 .faq-item-open .faq-answer {
-    max-height: 2000vh;
+    max-height: 3500px;
 }
 
 .faq-answer-content {
