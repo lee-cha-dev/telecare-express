@@ -14,6 +14,27 @@ function Footer(
         }
     };
 
+    const handleSectionClick = (e, sectionId) => {
+        e.preventDefault();
+
+        const section = document.getElementById(sectionId);
+
+        if (section) {
+            // Section exists on current page, scroll to it
+            section.scrollIntoView({ behavior: 'smooth' });
+        } else if (onNavigate) {
+            // Section doesn't exist, navigate to the home and then scroll
+            onNavigate('home');
+            // Wait for navigation and DOM update, then scroll
+            setTimeout(() => {
+                const targetSection = document.getElementById(sectionId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -35,9 +56,9 @@ function Footer(
                     <div className="footer-section">
                         <h4 className="footer-heading">Quick Links</h4>
                         <ul className="footer-links">
-                            <li><a href="#features">Features</a></li>
-                            <li><a href="#pricing">Pricing</a></li>
-                            <li><a href="#states">Get Started</a></li>
+                            <li><a href="#features" onClick={(e) => handleSectionClick(e, 'features')}>Features</a></li>
+                            <li><a href="#pricing" onClick={(e) => handleSectionClick(e, 'pricing')}>Pricing</a></li>
+                            <li><a href="#states" onClick={(e) => handleSectionClick(e, 'states')}>Get Started</a></li>
                             <li><a href="#faq" onClick={handleFaqClick}>FAQ</a></li>
                         </ul>
                     </div>
@@ -45,10 +66,10 @@ function Footer(
                     <div className="footer-section">
                         <h4 className="footer-heading">Services</h4>
                         <ul className="footer-links">
-                            <li><a href="#primary-care">Primary Care</a></li>
-                            <li><a href="#urgent-care">Urgent Care</a></li>
-                            <li><a href="#mental-health">Mental Health</a></li>
-                            <li><a href="#chronic-care">Chronic Care</a></li>
+                            <li><a href="#primary-care" onClick={(e) => handleSectionClick(e, 'primary-care')}>Primary Care</a></li>
+                            <li><a href="#urgent-care" onClick={(e) => handleSectionClick(e, 'urgent-care')}>Urgent Care</a></li>
+                            <li><a href="#mental-health" onClick={(e) => handleSectionClick(e, 'mental-health')}>Mental Health</a></li>
+                            <li><a href="#chronic-care" onClick={(e) => handleSectionClick(e, 'chronic-care')}>Chronic Care</a></li>
                         </ul>
                     </div>
 
@@ -67,9 +88,9 @@ function Footer(
                         &copy; 2025 TeleCare Express. All rights reserved.
                     </p>
                     <div className="footer-legal">
-                        <a href="#privacy">Privacy Policy</a>
-                        <a href="#terms">Terms of Service</a>
-                        <a href="#hipaa">HIPAA Notice</a>
+                        <a href="#privacy" onClick={(e) => handleSectionClick(e, 'privacy')}>Privacy Policy</a>
+                        <a href="#terms" onClick={(e) => handleSectionClick(e, 'terms')}>Terms of Service</a>
+                        <a href="#hipaa" onClick={(e) => handleSectionClick(e, 'hipaa')}>HIPAA Notice</a>
                     </div>
                 </div>
             </div>
