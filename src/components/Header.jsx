@@ -39,7 +39,10 @@ function Header(
                             <path d="M12 2L2 7V12C2 16.97 5.75 21.56 12 23C18.25 21.56 22 16.97 22 12V7L12 2Z" stroke="currentColor" strokeWidth="2"/>
                             <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                        <span className="logo-text">TeleCare Express</span>
+                        <span className="logo-text">
+                            <p className='logo-first'>TeleCare</p>
+                            <p className='logo-second'>Express</p>
+                        </span>
                     </a>
 
                     {
