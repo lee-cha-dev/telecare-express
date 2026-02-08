@@ -66,19 +66,17 @@ function Footer(
                     <div className="footer-section">
                         <h4 className="footer-heading">Services</h4>
                         <ul className="footer-links">
-                            <li><a href="#primary-care" onClick={(e) => handleSectionClick(e, 'primary-care')}>Primary Care</a></li>
-                            <li><a href="#urgent-care" onClick={(e) => handleSectionClick(e, 'urgent-care')}>Urgent Care</a></li>
-                            <li><a href="#mental-health" onClick={(e) => handleSectionClick(e, 'mental-health')}>Mental Health</a></li>
-                            <li><a href="#chronic-care" onClick={(e) => handleSectionClick(e, 'chronic-care')}>Chronic Care</a></li>
+                            <li><a href="https://justlabs.health" target="_blank" >Just Labs</a></li>
+                            <li><a href="https://costplusdrugs.com" target="_blank" >CostPlus Drugs</a></li>
                         </ul>
                     </div>
 
                     <div className="footer-section">
                         <h4 className="footer-heading">Contact</h4>
                         <ul className="footer-links">
-                            <li>support@telecareexpress.com</li>
-                            <li>1-800-TELECARE</li>
-                            <li>Available 24/7</li>
+                            <li><strong>Email:</strong> support@telecareexpress.com</li>
+                            <li><strong>Portal Support:</strong> 1-800-TELECARE</li>
+                            <li><strong>Fax:</strong> 501-300-1871</li>
                         </ul>
                     </div>
                 </div>
@@ -88,7 +86,6 @@ function Footer(
                         &copy; 2025 TeleCare Express. All rights reserved.
                     </p>
                     <div className="footer-legal">
-                        <a href="#privacy" onClick={(e) => handleSectionClick(e, 'privacy')}>Privacy Policy</a>
                         <a href="#terms" onClick={(e) => handleSectionClick(e, 'terms')}>Terms of Service</a>
                         <a href="#hipaa" onClick={(e) => handleSectionClick(e, 'hipaa')}>HIPAA Notice</a>
                     </div>

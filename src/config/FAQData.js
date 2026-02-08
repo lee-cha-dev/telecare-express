@@ -30,12 +30,9 @@ We've established partnerships with licensed healthcare providers in these state
 
 **Expansion Plans**
 We're actively working to expand our services to additional states. Our roadmap includes:
-- **Q2 2025:** Texas, Florida
-- **Q3 2025:** California, New York
-- **Q4 2025:** Additional states based on demand
-
-**Want Us in Your State?**
-Join our waitlist to be notified when we launch in your area. We prioritize expansion based on patient interest, so your request helps us decide where to grow next.
+- Missouri
+- Oregon
+- On site clinics
 
 **Traveling?**
 If you're a current patient traveling to a state where we're not yet available, please contact us—we may be able to provide limited services or referrals.`
@@ -47,9 +44,7 @@ If you're a current patient traveling to a state where we're not yet available, 
 
 **Our Provider Team Includes:**
 - **Medical Doctors (MDs)** – Board-certified physicians specializing in family medicine, internal medicine, and urgent care
-- **Doctors of Osteopathic Medicine (DOs)** – Physicians with additional training in holistic patient care
 - **Nurse Practitioners (NPs)** – Advanced practice nurses with prescriptive authority
-- **Physician Assistants (PAs)** – Licensed medical professionals practicing under physician supervision
 
 **Provider Requirements:**
 - Active, unrestricted medical license in your state
@@ -68,8 +63,7 @@ We regularly review patient feedback and clinical outcomes to ensure our provide
         answer: `We offer multiple options to fit your schedule and urgency level:
 
 **On-Demand Care (Urgent Needs)**
-- Connect with a provider in as little as **5-15 minutes**
-- Available 24/7, including nights, weekends, and holidays
+- Connect with a provider with the next available appointment
 - Ideal for sudden illness, minor injuries, or urgent questions
 - No appointment necessary—just log in and request a visit
 
@@ -79,14 +73,6 @@ We regularly review patient feedback and clinical outcomes to ensure our provide
 - Choose your preferred provider and time slot
 - Receive appointment reminders via email and text
 - Best for non-urgent concerns or follow-up visits
-
-**Average Wait Times:**
-| Time of Day | Typical Wait |
-|-------------|--------------|
-| Weekday mornings | 5-10 minutes |
-| Weekday evenings | 10-20 minutes |
-| Weekends | 10-15 minutes |
-| Holidays | 15-25 minutes |
 
 **Reducing Your Wait:**
 Complete your health questionnaire in advance and have your pharmacy information ready. This allows providers to review your information and begin your visit more quickly.`
@@ -125,7 +111,6 @@ Complete your health questionnaire in advance and have your pharmacy information
 - Anxiety and stress management
 - Depression screening and treatment
 - Sleep disorders and insomnia
-- ADHD management
 - Grief and life transitions
 
 **Chronic Condition Management**
@@ -162,12 +147,11 @@ If you're unsure whether your condition is appropriate for telehealth, start a v
 **Assessment & Diagnosis**
 - Comprehensive mental health evaluations
 - Depression and anxiety screening
-- ADHD assessment for adults
 - Mood disorder evaluation
 - Sleep disorder assessment
 
 **Ongoing Treatment**
-- Medication management for anxiety, depression, ADHD, and more
+- Medication management for anxiety, depression, and more
 - Regular check-ins and dosage adjustments
 - Side effect monitoring and management
 - Coordination with your existing therapist or psychiatrist
@@ -183,11 +167,10 @@ If you're unsure whether your condition is appropriate for telehealth, start a v
 - SSRIs and SNRIs (antidepressants)
 - Buspirone (for anxiety)
 - Sleep aids (non-controlled)
-- ADHD medications (with proper documentation)
 
 **What We Don't Provide:**
 - Long-term psychotherapy (we can refer you to specialists)
-- Controlled substances for new patients without prior documentation
+- Controlled substances
 - Treatment for severe psychiatric conditions requiring inpatient care
 
 **Privacy & Confidentiality:**
@@ -316,55 +299,8 @@ After each visit, you'll receive:
 
 **Refund Policy:**
 - Full refund if you cancel more than 2 hours before a scheduled appointment
-- Full refund if technical issues prevent your visit from completing
-- Subscription cancellations: You retain access until the end of your billing period
-
-**Financial Assistance:**
-If you're experiencing financial hardship, please contact us. We offer sliding scale pricing for qualifying patients and can discuss payment plan options.`
+- Subscription cancellations: You retain access until the end of your billing period, but could be billed for individual appointments if cancelled within the first 30 days`
     },
-    {
-        category: 'pricing',
-        question: "What's included in the subscription plans?",
-        answer: `Our subscription plans are designed for patients who need regular access to healthcare. Here's a detailed breakdown:
-
-**Monthly Plan – $49/month**
-
-✓ **Unlimited Video Visits** – See a provider as often as needed
-✓ **24/7 Access** – On-demand care any time, day or night
-✓ **No Per-Visit Fees** – Everything included in your monthly rate
-✓ **Priority Scheduling** – Shorter wait times for on-demand visits
-✓ **Messaging Support** – Unlimited secure messages to your care team
-✓ **Prescription Management** – Refills and adjustments included
-✓ **Lab Order Services** – We order labs; you pay lab directly
-✓ **Visit Summaries** – Detailed notes after every appointment
-✓ **Cancel Anytime** – No long-term commitment required
-
-**Annual Plan – $499/year (Save $89!)**
-
-Everything in the Monthly Plan, PLUS:
-✓ **Two Months Free** – Pay for 10 months, get 12
-✓ **Family Discount** – 20% off additional family members
-✓ **Priority Support** – Dedicated support line for billing questions
-✓ **Health Summary Reports** – Quarterly health status summaries
-✓ **Price Lock Guarantee** – Your rate won't increase during your plan
-
-**What's NOT Included:**
-- Lab work fees (paid directly to lab)
-- Prescription costs (paid at your pharmacy)
-- Specialist referrals (we can coordinate, but specialist fees apply)
-- Medical equipment or supplies
-
-**Who Benefits Most from Subscriptions?**
-- Patients with chronic conditions requiring regular monitoring
-- Families with children who get sick frequently
-- Anyone who values having a doctor "on call"
-- People without traditional health insurance
-- Those who prefer predictable healthcare costs
-
-**Switching Plans:**
-You can upgrade from Single Visit to Monthly at any time. If you upgrade to Annual mid-cycle, we'll prorate your remaining monthly balance.`
-    },
-
     // Technology & Privacy
     {
         category: 'technology',
@@ -374,7 +310,7 @@ You can upgrade from Single Visit to Monthly at any time. If you upgrade to Annu
 **Our HIPAA Compliance Includes:**
 
 **Technical Safeguards**
-- **End-to-End Encryption** – All video calls and messages are encrypted using AES-256, the same standard used by banks and government agencies
+- **End-to-End Encryption** – All video calls and messages are encrypted
 - **Secure Data Storage** – Your health records are stored in HIPAA-compliant data centers with multiple layers of security
 - **Access Controls** – Only authorized personnel can access your information, with every access logged and audited
 - **Automatic Timeouts** – Sessions automatically lock after periods of inactivity
@@ -400,12 +336,7 @@ You can upgrade from Single Visit to Monthly at any time. If you upgrade to Annu
 - Sell your data to third parties
 - Share information with employers or insurers without consent
 - Use your health information for marketing
-- Store video recordings of your visits (unless you request it)
-
-**Certifications:**
-- SOC 2 Type II Certified
-- HITRUST CSF Certified
-- Regular penetration testing by independent security firms`
+- Store video recordings of your visits`
     },
     {
         category: 'technology',
@@ -459,62 +390,6 @@ Our platform works directly in your browser—no downloads required!
 **Need Help?**
 Our technical support team is available 24/7. Click the "Tech Support" button during your visit, or call 1-800-TELECARE for immediate assistance.`
     },
-    {
-        category: 'technology',
-        question: "Is my personal information secure?",
-        answer: `Your security is paramount. We implement multiple layers of protection to keep your personal and health information safe.
-
-**Data Security Measures:**
-
-**Encryption**
-- All data encrypted in transit using TLS 1.3
-- All data encrypted at rest using AES-256
-- Encryption keys rotated regularly and stored in secure hardware modules
-
-**Authentication & Access**
-- Multi-factor authentication (MFA) available for your account
-- Biometric login support (Face ID, Touch ID, fingerprint)
-- Secure password requirements enforced
-- Automatic account lockout after failed login attempts
-- Session tokens expire after inactivity
-
-**Infrastructure Security**
-- Hosted on HIPAA-compliant cloud infrastructure (AWS/Azure)
-- Web Application Firewall (WAF) protection
-- DDoS attack mitigation
-- 24/7 security monitoring and intrusion detection
-- Regular vulnerability scanning and patching
-
-**Data Handling Practices**
-- Minimal data collection – we only collect what's necessary for your care
-- Data retention policies – records kept per legal requirements, then securely deleted
-- No data selling – we never sell your information to anyone
-- Anonymization – analytics use de-identified data only
-
-**Your Security Responsibilities:**
-- Use a strong, unique password for your account
-- Enable two-factor authentication (2FA)
-- Don't share your login credentials
-- Log out when using shared devices
-- Keep your device's operating system updated
-
-**Incident Response:**
-In the unlikely event of a security incident:
-- We maintain a dedicated incident response team
-- You'll be notified within 72 hours per HIPAA requirements
-- We provide guidance on protecting yourself
-- We conduct thorough investigations and implement improvements
-
-**Security Certifications & Audits:**
-- Annual third-party penetration testing
-- SOC 2 Type II certification
-- HIPAA compliance audits
-- Regular security training for all staff
-
-**Questions or Concerns?**
-Contact our security team at security@telecareexpress.com`
-    },
-
     // Prescriptions
     {
         category: 'prescriptions',
@@ -548,7 +423,6 @@ Contact our security team at security@telecareexpress.com`
 - Antidepressants (SSRIs, SNRIs)
 - Anti-anxiety medications (non-controlled)
 - Sleep aids (non-controlled)
-- ADHD medications (with documentation)
 
 **Chronic Condition Medications**
 - Blood pressure medications
@@ -564,12 +438,6 @@ Due to federal and state regulations, we cannot prescribe:
 - Medical marijuana
 - Medications requiring in-person exams or lab work first
 
-**For Existing Controlled Substance Prescriptions:**
-If you have an established history with controlled medications:
-- We can continue existing prescriptions with proper documentation
-- You'll need to provide records from your previous provider
-- Some medications require periodic in-person visits
-
 **How Prescriptions Work:**
 1. Provider evaluates your condition during the visit
 2. If medication is appropriate, they select the best option
@@ -579,7 +447,7 @@ If you have an established history with controlled medications:
 6. Pick up at your convenience
 
 **Prescription Costs:**
-TeleCare Express does not charge for prescriptions—you pay your pharmacy directly. We often prescribe generics to save you money and can suggest discount programs like GoodRx.`
+TeleCare Express does not charge for prescriptions—you pay your pharmacy directly. We often prescribe generics to save you money and can suggest discount programs like GoodRx and Cost Plus Drugs.`
     },
     {
         category: 'prescriptions',
@@ -604,7 +472,6 @@ Your provider will discuss medication options with you, including:
 **Step 3: Electronic Transmission**
 - Prescriptions are sent electronically and securely
 - Most pharmacies receive the prescription within **5-10 minutes**
-- Controlled substances (when applicable) use secure e-prescribing protocols
 
 **Step 4: Pharmacy Notification**
 - Your pharmacy will contact you when your prescription is ready
@@ -615,7 +482,7 @@ Your provider will discuss medication options with you, including:
 - Pick up in person at your selected pharmacy
 - Many pharmacies offer drive-through pickup
 - Consider mail-order pharmacies for maintenance medications
-- Services like Amazon Pharmacy, Capsule, and Alto deliver
+- Services like Cost Plus Drugs
 
 **Tips for Faster Pickup:**
 - Make sure your pharmacy has your current insurance information
@@ -648,7 +515,7 @@ If you have questions after your visit, message your provider through the patien
 - Click "Request Refill" next to the medication
 - Confirm your pharmacy
 - Refill is typically processed within **2-4 hours**
-- No visit required for routine refills
+- No visit required for patients on the Comprehensive Care Plans
 
 **For Medications from Another Provider:**
 - Schedule a brief consultation (often 5-10 minutes)
@@ -675,7 +542,6 @@ If you have questions after your visit, message your provider through the patien
 Some medications require a consultation to ensure safe continuation:
 - Medications you've taken for less than 6 months
 - Medications requiring lab monitoring
-- Controlled substances
 - Medications with significant interactions
 
 **Automatic Refill Reminders:**
@@ -688,7 +554,7 @@ Never run out of medications! Enable reminders to:
 We may not be able to refill if:
 - The medication requires labs that are overdue
 - You need an in-person exam per standard of care
-- The medication is a controlled substance without proper documentation
+- The medication is a controlled substance
 - There are safety concerns based on your current health status
 
 In these cases, we'll explain what's needed and help you get the appropriate care.

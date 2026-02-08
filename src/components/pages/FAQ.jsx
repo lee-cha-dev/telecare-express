@@ -87,14 +87,48 @@ function FAQ({onNavigate}) {
         setOpenIndex(null);
     };
 
-    // Format answer text with markdown-like styling
     const formatAnswer = (text) => {
         return text.split('\n').map((line, i) => {
             // Headers
             if (line.startsWith('**') && line.endsWith('**')) {
                 return <h4 key={i} className="faq-answer-heading">{line.replace(/\*\*/g, '')}</h4>;
             }
-            // Bold text within lines
+
+            // List items (check BEFORE bold text)
+            if (line.startsWith('- ') || line.startsWith('✓ ')) {
+                const content = line.substring(2);
+                // Handle bold text within list items
+                if (content.includes('**')) {
+                    const parts = content.split(/\*\*(.*?)\*\*/g);
+                    return (
+                        <li key={i} className="faq-answer-list-item">
+                            {parts.map((part, j) =>
+                                j % 2 === 1 ? <strong key={j}>{part}</strong> : part
+                            )}
+                        </li>
+                    );
+                }
+                return <li key={i} className="faq-answer-list-item">{content}</li>;
+            }
+
+            // Indented list items
+            if (line.startsWith('  -')) {
+                const content = line.substring(4);
+                // Handle bold text within indented list items
+                if (content.includes('**')) {
+                    const parts = content.split(/\*\*(.*?)\*\*/g);
+                    return (
+                        <li key={i} style={{marginLeft: '40px'}} className="faq-answer-list-item">
+                            {parts.map((part, j) =>
+                                j % 2 === 1 ? <strong key={j}>{part}</strong> : part
+                            )}
+                        </li>
+                    );
+                }
+                return <li key={i} style={{marginLeft: '40px'}} className="faq-answer-list-item">{content}</li>;
+            }
+
+            // Bold text within regular lines
             if (line.includes('**')) {
                 const parts = line.split(/\*\*(.*?)\*\*/g);
                 return (
@@ -105,18 +139,17 @@ function FAQ({onNavigate}) {
                     </p>
                 );
             }
-            // List items
-            if (line.startsWith('- ') || line.startsWith('✓ ')) {
-                return <li key={i} className="faq-answer-list-item">{line.substring(2)}</li>;
-            }
+
             // Table rows (simplified handling)
             if (line.startsWith('|') && line.endsWith('|')) {
-                return null; // Skip table formatting for simplicity
+                return null;
             }
+
             // Empty lines become spacing
             if (line.trim() === '') {
                 return <br key={i}/>;
             }
+
             // Regular paragraphs
             return <p key={i} className="faq-answer-text">{line}</p>;
         });

@@ -10,7 +10,7 @@ function StateSelector() {
 
     const states = [
         { code: 'AZ', name: 'Arizona', available: true, logo: arizonaLogo },
-        { code: 'AR', name: 'Arkansas', available: true, logo: arkansasLogo }
+        { code: 'AR', name: 'Arkansas', available: false, logo: arkansasLogo }
     ];
 
     const handleStateSelect = (stateCode) => {
@@ -56,6 +56,13 @@ function StateSelector() {
                                             Available
                                         </div>
                                     )}
+                                    {
+                                        !state.available && (
+                                            <div className="state-not-available">
+                                                Coming Soon
+                                            </div>
+                                        )
+                                    }
                                 </div>
                                 {selectedState === state.code && (
                                     <div className="state-card-checkmark">

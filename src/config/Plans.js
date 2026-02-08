@@ -1,6 +1,6 @@
 export const plans = [
     {
-        name: 'Pay Per Visit',
+        name: 'Basic Visit',
         price: 49,
         period: 'per visit',
         description: 'Perfect for occasional healthcare needs',
@@ -21,7 +21,7 @@ export const plans = [
         period: 'per visit',
         description: 'Moderate complexity conditions requiring more detailed evaluation and follow-up',
         features: [
-            'Including all features from Pay Per Visit',
+            'Including all features from Basic Visit',
             'Lab ordering and review',
             'X-ray ordering and review',
             'Hospital records review'
