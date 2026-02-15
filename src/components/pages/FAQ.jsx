@@ -44,7 +44,7 @@ function FAQ({onNavigate}) {
         if (openIndex !== null) {
             setOpenIndex(null);
 
-            // Wait for collapse animation to finish, then open new item and scroll
+            // Wait for collapse animation to finish, then open the new item and scroll
             setTimeout(() => {
                 setOpenIndex(index);
 

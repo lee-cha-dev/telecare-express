@@ -301,7 +301,7 @@ body {
    ============================================ */
 .section-header {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .section-title {
@@ -672,7 +672,7 @@ body {
 }
 
 .state-selector-actions .btn {
-    margin-bottom: 16px;
+    margin-bottom: 40px;
 }
 
 .state-selector-note {
