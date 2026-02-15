@@ -131,6 +131,15 @@ body {
     display: block;
 }
 
+.btn-link,
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active,
+.btn-link:visited {
+    text-decoration: none !important;
+    color: white !important;
+}
+
 /* ============================================
    HEADER
    ============================================ */

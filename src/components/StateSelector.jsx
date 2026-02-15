@@ -17,25 +17,25 @@ function StateSelector() {
     //     setSelectedState(stateCode);
     // };
 
-    const handleContinue = () => {
-        window.location.href = 'https://app2.rxnt.com/phr/#/patient-enrollment?ee3062b1-cb4d-4727-a1a0-c1cc28e90b99';
-        // if (selectedState) {
-        //     let url = '';
-        //     switch (selectedState) {
-        //         case 'AZ':
-        //             url = 'https://app2.rxnt.com/phr/#/patient-enrollment?ee3062b1-cb4d-4727-a1a0-c1cc28e90b99';
-        //             break;
-        //         case 'AR':
-        //             url = 'https://app2.rxnt.com/ar';
-        //             break;
-        //         default:
-        //             break;
-        //     }
-        //     console.log(`Redirecting to ${url}...`);
-        //     // Redirect to EMR (based on state selected
-        //     window.location.href = url;
-        // }
-    };
+    // const handleContinue = () => {
+    //     window.location.href = 'https://app2.rxnt.com/phr/#/patient-enrollment?ee3062b1-cb4d-4727-a1a0-c1cc28e90b99';
+    //     // if (selectedState) {
+    //     //     let url = '';
+    //     //     switch (selectedState) {
+    //     //         case 'AZ':
+    //     //             url = 'https://app2.rxnt.com/phr/#/patient-enrollment?ee3062b1-cb4d-4727-a1a0-c1cc28e90b99';
+    //     //             break;
+    //     //         case 'AR':
+    //     //             url = 'https://app2.rxnt.com/ar';
+    //     //             break;
+    //     //         default:
+    //     //             break;
+    //     //     }
+    //     //     console.log(`Redirecting to ${url}...`);
+    //     //     // Redirect to EMR (based on state selected
+    //     //     window.location.href = url;
+    //     // }
+    // };
 
     return (
         <section id="states" className="state-selector">
@@ -87,13 +87,13 @@ function StateSelector() {
                     {/*</div>*/}
 
                     <div className="state-selector-actions">
-                        <button
-                            onClick={handleContinue}
-                            // disabled={!selectedState}
-                            className="btn btn-primary btn-lg"
+                        <a
+                            className="btn btn-primary btn-lg btn-link"
+                            href='https://app2.rxnt.com/phr/#/patient-enrollment?ee3062b1-cb4d-4727-a1a0-c1cc28e90b99'
+                            target="_blank"
                         >
                             Continue to Patient Portal
-                        </button>
+                        </a>
                         <p className="state-selector-note">
                             By continuing, you will be redirected to our secure patient portal to complete registration or sign in.
                         </p>
