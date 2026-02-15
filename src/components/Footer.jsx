@@ -74,8 +74,8 @@ function Footer(
                     <div className="footer-section">
                         <h4 className="footer-heading">Contact</h4>
                         <ul className="footer-links">
-                            <li><strong>Email:</strong> support@telecareexpress.com</li>
-                            <li><strong>Portal Support:</strong> 1-800-TELECARE</li>
+                            <li><strong>Support Site:</strong> <a target="_blank" href="http://help.rxnt.com">https://help.rxnt.com</a></li>
+                            <li><strong>Sign In Support:</strong> <a href="tel:410-907-7976">410-907-7976</a></li>
                             <li><strong>Fax:</strong> 501-300-1871</li>
                         </ul>
                     </div>
@@ -83,11 +83,12 @@ function Footer(
 
                 <div className="footer-bottom">
                     <p className="footer-copyright">
-                        &copy; 2025 TeleCare Express. All rights reserved.
+                        &copy; 2025 TeleCare Express.
                     </p>
-                    <div className="footer-legal">
-                        <a href="#terms" onClick={(e) => handleSectionClick(e, 'terms')}>Terms of Service</a>
-                        <a href="#hipaa" onClick={(e) => handleSectionClick(e, 'hipaa')}>HIPAA Notice</a>
+                    <div className="footer-legal footer-copyright">
+                        All rights reserved.
+                        {/*<a href="#terms" onClick={(e) => handleSectionClick(e, 'terms')}>Terms of Service</a>*/}
+                        {/*<a href="#hipaa" onClick={(e) => handleSectionClick(e, 'hipaa')}>HIPAA Notice</a>*/}
                     </div>
                 </div>
             </div>
