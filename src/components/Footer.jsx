@@ -1,3 +1,5 @@
+import LogoImage from "../../src/logo_image.png";
+
 // ============================================
 // FOOTER COMPONENT
 // ============================================
@@ -41,11 +43,7 @@ function Footer(
                 <div className="footer-content">
                     <div className="footer-section">
                         <div className="footer-logo">
-                            <svg className="footer-logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 2L2 7V12C2 16.97 5.75 21.56 12 23C18.25 21.56 22 16.97 22 12V7L12 2Z" fill="currentColor" opacity="0.2"/>
-                                <path d="M12 2L2 7V12C2 16.97 5.75 21.56 12 23C18.25 21.56 22 16.97 22 12V7L12 2Z" stroke="currentColor" strokeWidth="2"/>
-                                <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
+                            <img src={LogoImage} className='logo-image' alt="TeleCare Express Logo" />
                             <span>TeleCare Express</span>
                         </div>
                         <p className="footer-tagline">
