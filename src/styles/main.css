@@ -706,7 +706,7 @@ body {
 .footer {
     background: var(--text-primary);
     color: white;
-    padding: 60px 0 30px;
+    padding: 60px 0 15px;
 }
 
 .footer-content {
@@ -772,7 +772,7 @@ body {
 }
 
 .footer-bottom {
-    padding-top: 32px;
+    padding-top: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     display: flex;
     justify-content: space-between;
@@ -1402,6 +1402,34 @@ body {
     background: rgba(255, 255, 255, 0.1);
     border-color: white;
     color: white;
+}
+
+.seal {
+    width: auto;
+    min-height: 50px;
+    height: auto;
+    box-shadow: var(--shadow-lg);
+}
+
+.seal-image {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+}
+
+.seal-iframe {
+    width: 177px;
+    height: 80px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+    display: block;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.seal-iframe:hover {
+    transform: translateY(2px);
+    box-shadow: none;
 }
 
 /* FAQ Responsive - Tablet */

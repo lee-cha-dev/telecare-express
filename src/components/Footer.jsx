@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import LogoImage from "../../src/logo_image.png";
 
 // ============================================
@@ -8,6 +9,68 @@ function Footer(
         onNavigate
     }
 ) {
+    const sealRef = useRef(null);
+
+    useEffect(() => {
+        const sealNode = sealRef.current;
+        if (!sealNode) return;
+
+        // Prevent duplicate injection in React StrictMode or re-renders.
+        if (sealNode.querySelector('iframe[data-rapidscan-seal]')) return;
+
+        const iframe = document.createElement('iframe');
+        iframe.setAttribute('title', 'RapidScan Secure Seal');
+        iframe.setAttribute('data-rapidscan-seal', 'true');
+        iframe.setAttribute('scrolling', 'no');
+        iframe.setAttribute('frameborder', '0');
+        iframe.className = 'seal-iframe';
+
+        sealNode.appendChild(iframe);
+
+        const doc = iframe.contentDocument || iframe.contentWindow?.document;
+        if (!doc) return;
+
+        doc.open();
+        doc.write(
+            "<!doctype html><html><head><meta charset='utf-8'></head><body>" +
+            "<script type='text/javascript' src='https://www.rapidscansecure.com/siteseal/siteseal.js?code=76,2146E693FAE174EE840B1B8B9E1D9C0FDA3D2414'></script>" +
+            "</body></html>"
+        );
+        doc.close();
+
+        return () => {
+            iframe.remove();
+        };
+    }, []);
+
+    useEffect(() => {
+        const applySealClass = () => {
+            // Check main document
+            const mainImg = document.querySelector("img[alt='CompliAssure SiteSeal']");
+            if (mainImg) {
+                mainImg.classList.add('seal-image');
+                return;
+            }
+
+            // Check inside the iframe we inject for the seal
+            const iframe = sealRef.current?.querySelector('iframe[data-rapidscan-seal]');
+            const doc = iframe?.contentDocument || iframe?.contentWindow?.document;
+            const iframeImg = doc?.querySelector("img[alt='CompliAssure SiteSeal']");
+            if (iframeImg) {
+                iframeImg.classList.add('seal-image');
+            }
+        };
+
+        if (document.readyState === 'complete') {
+            applySealClass();
+        } else {
+            window.addEventListener('load', applySealClass);
+        }
+
+        return () => {
+            window.removeEventListener('load', applySealClass);
+        };
+    }, []);
     const handleFaqClick = (e) => {
         e.preventDefault();
         if (onNavigate) {
@@ -83,6 +146,7 @@ function Footer(
                     <p className="footer-copyright">
                         &copy; 2025 TeleCare Express.
                     </p>
+                    <div className='seal' ref={sealRef} />
                     <div className="footer-legal footer-copyright">
                         All rights reserved.
                         {/*<a href="#terms" onClick={(e) => handleSectionClick(e, 'terms')}>Terms of Service</a>*/}
